@@ -17,7 +17,7 @@ indent_size = off
 [src/data/contributors.json]
 insert_final_newline = false
 
-[_public/**]
+[docs/**]
 charset = unset
 end_of_line = unset
 insert_final_newline = unset

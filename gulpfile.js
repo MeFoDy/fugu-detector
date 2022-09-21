@@ -9,7 +9,7 @@ const paths = require('vinyl-paths');
 const workboxBuild = require('workbox-build');
 const fs = require('fs');
 
-const PUBLIC_PATH = '_public';
+const PUBLIC_PATH = 'docs';
 
 // Styles
 

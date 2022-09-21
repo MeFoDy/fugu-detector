@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
-    "prod": "npm run build:prod && npx live-server _public",
-    "build": "rm -rf _public && eleventy && gulp build",
+    "prod": "npm run build:prod && npx live-server docs",
+    "build": "rm -rf docs && eleventy && gulp build",
     "build:prod": "ELEVENTY_ENV=production npm run build",
     "fix": "eslint --fix && stylelint --fix \"src/style.css\"",
     "lint:css": "stylelint \"src/style.css\"",

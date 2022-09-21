@@ -29,7 +29,7 @@ module.exports = function (config) {
     return {
         dir: {
             input: 'src',
-            output: '_public',
+            output: 'docs',
             data: 'data',
         },
         dataTemplateEngine: 'njk',

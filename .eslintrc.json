@@ -10,7 +10,7 @@
     "ecmaVersion": 12
   },
   "ignorePatterns": [
-    "_public",
+    "docs",
     "!.eleventy.js"
   ],
   "rules": {
