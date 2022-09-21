@@ -1,0 +1,26 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+charset = utf-8
+
+[{*.json,*.yml,*.toml}]
+indent_size = 2
+
+[*.txt]
+indent_size = off
+
+[src/data/contributors.json]
+insert_final_newline = false
+
+[_public/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset

@@ -1,0 +1,63 @@
+{
+  "name": "fugu-detector",
+  "version": "0.0.1",
+  "homepage": "/",
+  "private": true,
+  "scripts": {
+    "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "prod": "npm run build:prod && npx live-server _public",
+    "build": "rm -rf _public && eleventy && gulp build",
+    "build:prod": "ELEVENTY_ENV=production npm run build",
+    "fix": "eslint --fix && stylelint --fix \"src/style.css\"",
+    "lint:css": "stylelint \"src/style.css\"",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:js": "eslint .",
+    "lint": "npm run lint:editorconfig && npm run lint:css && npm run lint:js",
+    "prepare": "npx simple-git-hooks"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "del": "^6.0.0",
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^8.23.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-rewrite": "^5.0.0",
+    "gulp-terser": "^2.1.0",
+    "html-minifier": "^4.0.0",
+    "lint-staged": "^11.0.0",
+    "postcss": "^8.4.16",
+    "postcss-color-hex-alpha": "^8.0.4",
+    "postcss-csso": "^6.0.1",
+    "simple-git-hooks": "^2.8.0",
+    "stylelint": "^14.12.1",
+    "stylelint-order": "^5.0.0",
+    "vinyl-paths": "^3.0.0",
+    "workbox-build": "^6.5.4"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-fetch": "^3.0.0"
+  },
+  "lint-staged": {
+    "*": [
+      "editorconfig-checker"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm run lint"
+  }
+}
