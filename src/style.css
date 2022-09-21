@@ -124,6 +124,14 @@ a:active {
     width: 1.5em;
 }
 
+.footer {
+    margin-top: 1em;
+}
+
+.footer p {
+    margin: 0;
+}
+
 @media (max-width: 400px) {
     body {
         padding: 1em;
