@@ -2,15 +2,15 @@
     "short_name": "Fugu Detector",
     "name": "Fugu Detector",
     "lang": "en",
-    "start_url": "/",
-    "scope": "/",
+    "start_url": "./",
+    "scope": "./",
     "display": "minimal-ui",
     "orientation": "any",
     "description": "The page shows which Project Fugu APIs are available in your browser",
     "theme_color": "#4a9ff4",
     "background_color": "#162447",
     "icons": [
-        { "src": "/favicon/icon-192.png", "type": "image/png", "sizes": "192x192" },
-        { "src": "/favicon/icon-512.png", "type": "image/png", "sizes": "512x512" }
+        { "src": "favicon/icon-192.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "favicon/icon-512.png", "type": "image/png", "sizes": "512x512" }
     ]
 }
