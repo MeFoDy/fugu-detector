@@ -21,7 +21,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.12",
     "del": "^6.0.0",
-    "editorconfig-checker": "^4.0.2",
+    "editorconfig-checker": "^5.1.2",
     "eslint": "^8.23.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -32,18 +32,19 @@
     "gulp-terser": "^2.1.0",
     "html-minifier": "^4.0.0",
     "lint-staged": "^11.0.0",
-    "postcss": "^8.4.16",
+    "postcss": "^8.4.33",
     "postcss-color-hex-alpha": "^8.0.4",
     "postcss-csso": "^6.0.1",
     "simple-git-hooks": "^2.8.0",
     "stylelint": "^14.12.1",
     "stylelint-order": "^5.0.0",
     "vinyl-paths": "^3.0.0",
-    "workbox-build": "^6.5.4"
+    "workbox-build": "^7.0.0"
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-fetch": "^3.0.0"
+    "@11ty/eleventy-fetch": "^3.0.0",
+    "fugu-api-data": "^1.17.0"
   },
   "lint-staged": {
     "*": [
@@ -53,7 +54,7 @@
       "eslint --fix"
     ],
     "*.css": [
-      "stylelint --fix"
+      "stylelint --fix --allow-empty-input"
     ]
   },
   "simple-git-hooks": {
