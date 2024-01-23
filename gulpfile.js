@@ -30,7 +30,7 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
     return gulp
-        .src(`${PUBLIC_PATH}/script.js`)
+        .src(`${PUBLIC_PATH}/*.js`)
         .pipe(
             babel({
                 presets: [
@@ -55,7 +55,7 @@ gulp.task('cache:hash', () => {
     return gulp
         .src(
             [
-                `${PUBLIC_PATH}/script.js`,
+                `${PUBLIC_PATH}/*.js`,
                 `${PUBLIC_PATH}/style.css`,
                 `${PUBLIC_PATH}/favicon/**/*.{svg,png}`,
                 `${PUBLIC_PATH}/manifest.webmanifest`,

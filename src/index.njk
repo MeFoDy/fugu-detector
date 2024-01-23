@@ -6,9 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./style.css">
         <title>Fugu Detector</title>
-        <link rel="icon" href="./favicon.ico" sizes="any"><!-- 32×32 -->
+        <link
+        rel="icon" href="./favicon.ico" sizes="any">
+        <!-- 32×32 -->
         <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="./favicon/icon-180.png"><!-- 180×180 -->
+        <link
+        rel="apple-touch-icon" href="./favicon/icon-180.png">
+        <!-- 180×180 -->
         <link rel="manifest" href="./manifest.webmanifest">
     </head>
     <body>
@@ -16,7 +20,7 @@
         <p class="description">The page shows which Project Fugu APIs are available in your browser.</p>
         <ul class="container">
             {%- for item in fuguDetector -%}
-                <li class="card" id="{{ item.id }}">
+                <li class="card" id="{{ item.id }}" {% if item.chromeStatusID %} data-chromium-id="{{ item.chromeStatusID }}" {% endif %}>
                     <h2 class="card__title">{{ item.title }}</h2>
                     <span class="card__status"></span>
                     {% if item.summary %}
@@ -71,15 +75,18 @@
                 </li>
             {%- endfor -%}
         </ul>
-
         <footer class="footer">
-            <p>Based on <a href="https://fugu-tracker.web.app/">Fugu API Tracker</a> data.</p>
-            <p>Made by <a href="https://twitter.com/dark_mefody" target="_blank">@dark_mefody</a>.</p>
-            <p><a href="https://github.com/MeFoDy/fugu-detector/" target="_blank">Edit on GitHub</a></p>
+            <p>Based on
+                <a href="https://fugu-tracker.web.app/">Fugu API Tracker</a>
+                data.</p>
+            <p>Made by
+                <a href="https://twitter.com/dark_mefody" target="_blank">@dark_mefody</a>.</p>
+            <p>
+                <a href="https://github.com/MeFoDy/fugu-detector/" target="_blank">Edit on GitHub</a>
+            </p>
         </footer>
-
+        <script src="./fugu-patterns.js" defer></script>
         <script src="./script.js" defer></script>
-
         <script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', () => {
@@ -87,6 +94,5 @@
                 });
             }
         </script>
-
     </body>
 </html>

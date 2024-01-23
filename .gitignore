@@ -2,6 +2,9 @@ node_modules
 _cache
 .cache
 
+# got from node_modules
+src/fugu-patterns.js
+
 # misc
 .DS_Store
 

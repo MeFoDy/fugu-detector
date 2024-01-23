@@ -8,6 +8,7 @@ module.exports = function (config) {
     config.addPassthroughCopy('src/manifest.webmanifest');
     config.addPassthroughCopy('src/style.css');
     config.addPassthroughCopy('src/script.js');
+    config.addPassthroughCopy('src/fugu-patterns.js');
     config.addPassthroughCopy(
         'src/**/*.(html|jpg|png|webp|avif|ico|svg|mp4|xml)',
     );

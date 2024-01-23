@@ -4,11 +4,12 @@
   "homepage": "/",
   "private": true,
   "scripts": {
-    "start": "ELEVENTY_ENV=development eleventy --serve --quiet",
+    "start": "npm run fugu-api && ELEVENTY_ENV=development eleventy --serve --quiet",
     "prod": "npm run build:prod && npx live-server docs",
-    "build": "rm -rf docs && eleventy && gulp build",
+    "build": "rm -rf docs && npm run fugu-api && eleventy && gulp build",
     "build:prod": "ELEVENTY_ENV=production npm run build",
     "fix": "eslint --fix && stylelint --fix \"src/style.css\"",
+    "fugu-api": "cp node_modules/fugu-api-data/patterns.js src/fugu-patterns.js",
     "lint:css": "stylelint \"src/style.css\"",
     "lint:editorconfig": "editorconfig-checker",
     "lint:js": "eslint .",
@@ -44,7 +45,7 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-fetch": "^3.0.0",
-    "fugu-api-data": "^1.17.0"
+    "fugu-api-data": "^1.18.0"
   },
   "lint-staged": {
     "*": [

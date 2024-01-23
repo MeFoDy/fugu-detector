@@ -11,6 +11,7 @@
   },
   "ignorePatterns": [
     "docs",
+    "src/fugu-patterns.js",
     "!.eleventy.js"
   ],
   "rules": {

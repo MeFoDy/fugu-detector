@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const EleventyFetch = require('@11ty/eleventy-fetch');
 
 module.exports = async function () {
@@ -14,6 +13,7 @@ module.exports = async function () {
             allApis.push(
                 ...data.rows[key].map((row) => {
                     row.status = key;
+                    row.chromeStatusID = row?.feature?.id;
                     return row;
                 }),
             );
