@@ -45,7 +45,7 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-fetch": "^3.0.0",
-    "fugu-api-data": "^1.18.0"
+    "fugu-api-data": "^1.18.1"
   },
   "lint-staged": {
     "*": [
